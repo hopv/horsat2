@@ -1,0 +1,70 @@
+%BEGING
+S_SSSSS17  -> SSSSS17 c_bot_natlist c_cons_x53_xs55 c_error_natlist c_nil.
+KK_c_bot_bool c_bot_bool c_error_bool c_false c_true  -> c_bot_bool.
+KK_c_error_bool c_bot_bool c_error_bool c_false c_true  -> c_error_bool.
+KK_c_false c_bot_bool c_error_bool c_false c_true  -> c_false.
+KK_c_true c_bot_bool c_error_bool c_false c_true  -> c_true.
+KK_c_bot_nat c_bot_nat c_error_nat c_x103  -> c_bot_nat.
+KK_c_error_nat c_bot_nat c_error_nat c_x103  -> c_error_nat.
+KK_c_x103 c_bot_nat c_error_nat c_x103  -> c_x103.
+KK_c_bot_natlist c_bot_natlist c_cons_x53_xs55 c_error_natlist c_nil  -> c_bot_natlist.
+KK_c_cons_x53_xs55 c_bot_natlist c_cons_x53_xs55 c_error_natlist c_nil  -> c_cons_x53_xs55.
+KK_c_error_natlist c_bot_natlist c_cons_x53_xs55 c_error_natlist c_nil  -> c_error_natlist.
+KK_c_nil c_bot_natlist c_cons_x53_xs55 c_error_natlist c_nil  -> c_nil.
+KK_c_bot_natlistt c_bot_natlistt c_conss_x67_xs69 c_error_natlistt c_nill  -> c_bot_natlistt.
+KK_c_conss_x67_xs69 c_bot_natlistt c_conss_x67_xs69 c_error_natlistt c_nill  -> c_conss_x67_xs69.
+KK_c_error_natlistt c_bot_natlistt c_conss_x67_xs69 c_error_natlistt c_nill  -> c_error_natlistt.
+KK_c_nill c_bot_natlistt c_conss_x67_xs69 c_error_natlistt c_nill  -> c_nill.
+SSSSS17 c_bot_natlist c_cons_x53_xs55 c_error_natlist c_nil  -> br c_bot_natlist (SSSSS c_bot_natlist c_cons_x53_xs55 c_error_natlist c_nil).
+K_false c_bot_bool c_error_bool c_false c_true  -> c_false.
+K_true c_bot_bool c_error_bool c_false c_true  -> c_true.
+K_nill c_bot_natlistt c_conss_x67_xs69 c_error_natlistt c_nill  -> c_nill.
+K_conss x0 x1 c_bot_natlistt c_conss_x67_xs69 c_error_natlistt c_nill  -> x0 (x1 c_conss_x67_xs69 c_conss_x67_xs69 c_error_natlistt c_conss_x67_xs69) (x1 c_conss_x67_xs69 c_conss_x67_xs69 c_error_natlistt c_conss_x67_xs69) (x1 c_error_natlistt c_error_natlistt c_error_natlistt c_error_natlistt) (x1 c_conss_x67_xs69 c_conss_x67_xs69 c_error_natlistt c_conss_x67_xs69).
+K_cons x0 x1 c_bot_natlist c_cons_x53_xs55 c_error_natlist c_nil  -> x0 (x1 c_cons_x53_xs55 c_cons_x53_xs55 c_error_natlist c_cons_x53_xs55) (x1 c_error_natlist c_error_natlist c_error_natlist c_error_natlist) (x1 c_cons_x53_xs55 c_cons_x53_xs55 c_error_natlist c_cons_x53_xs55).
+K_nil c_bot_natlist c_cons_x53_xs55 c_error_natlist c_nil  -> c_nil.
+K_succ x0 c_bot_nat c_error_nat c_x103  -> x0 c_x103 c_error_nat c_x103.
+K_z c_bot_nat c_error_nat c_x103  -> c_x103.
+K_error_bool c_bot_bool c_error_bool c_false c_true  -> c_error_bool.
+K_error_nat c_bot_nat c_error_nat c_x103  -> c_error_nat.
+K_error_natlist c_bot_natlist c_cons_x53_xs55 c_error_natlist c_nil  -> c_error_natlist.
+K_error_natlistt c_bot_natlistt c_conss_x67_xs69 c_error_natlistt c_nill  -> c_error_natlistt.
+SSSSS c_bot_natlist c_cons_x53_xs55 c_error_natlist c_nil  -> Main1 S7 c_bot_natlist c_cons_x53_xs55 c_error_natlist c_nil.
+XS69 c_bot_natlistt c_conss_x67_xs69 c_error_natlistt c_nill  -> Filter3 P5713 XS6114 c_bot_natlistt c_conss_x67_xs69 c_error_natlistt c_nill.
+X67 c_bot_natlist c_cons_x53_xs55 c_error_natlist c_nil  -> X5912 c_bot_natlist c_cons_x53_xs55 c_error_natlist c_nil.
+XS61 c_bot_natlistt c_conss_x67_xs69 c_error_natlistt c_nill  -> ListNN8 c_bot_natlistt c_conss_x67_xs69 c_error_natlistt c_nill.
+P57 x0 c_bot_bool c_error_bool c_false c_true  -> br (NE4 x0 c_bot_bool c_error_bool c_false c_true) (P5713 x0 c_bot_bool c_error_bool c_false c_true).
+X59 c_bot_natlist c_cons_x53_xs55 c_error_natlist c_nil  -> ListN9 c_bot_natlist c_cons_x53_xs55 c_error_natlist c_nil.
+X41 c_bot_nat c_error_nat c_x103  -> N10 c_bot_nat c_error_nat c_x103.
+N c_bot_nat c_error_nat c_x103  -> br (K_z c_bot_nat c_error_nat c_x103) (K_succ N10 c_bot_nat c_error_nat c_x103).
+ListN c_bot_natlist c_cons_x53_xs55 c_error_natlist c_nil  -> br (K_nil c_bot_natlist c_cons_x53_xs55 c_error_natlist c_nil) (K_cons N10 ListN9 c_bot_natlist c_cons_x53_xs55 c_error_natlist c_nil).
+ListNN c_bot_natlistt c_conss_x67_xs69 c_error_natlistt c_nill  -> br (K_nill c_bot_natlistt c_conss_x67_xs69 c_error_natlistt c_nill) (K_conss ListN9 ListNN8 c_bot_natlistt c_conss_x67_xs69 c_error_natlistt c_nill).
+S c_bot_natlistt c_conss_x67_xs69 c_error_natlistt c_nill  -> ListNN8 c_bot_natlistt c_conss_x67_xs69 c_error_natlistt c_nill.
+Head x0 c_bot_nat c_error_nat c_x103  -> x0 c_bot_nat (X4111 c_bot_nat c_error_nat c_x103) c_error_nat (K_error_nat c_bot_nat c_error_nat c_x103).
+If x0 x1 x2 c_bot_natlistt c_conss_x67_xs69 c_error_natlistt c_nill  -> x0 c_bot_natlistt c_error_natlistt (x2 c_bot_natlistt c_conss_x67_xs69 c_error_natlistt c_nill) (x1 c_bot_natlistt c_conss_x67_xs69 c_error_natlistt c_nill).
+NE x0 c_bot_bool c_error_bool c_false c_true  -> x0 c_bot_bool (K_true c_bot_bool c_error_bool c_false c_true) c_error_bool (K_false c_bot_bool c_error_bool c_false c_true).
+Filter x0 x1 c_bot_natlistt c_conss_x67_xs69 c_error_natlistt c_nill  -> x1 c_bot_natlistt (If5 (x0 X5912) (K_conss X5912 (Filter3 x0 XS6114)) (Filter3 x0 XS6114) c_bot_natlistt c_conss_x67_xs69 c_error_natlistt c_nill) c_error_natlistt (K_nill c_bot_natlistt c_conss_x67_xs69 c_error_natlistt c_nill).
+Map x0 x1 c_bot_natlist c_cons_x53_xs55 c_error_natlist c_nil  -> x1 c_bot_natlist (K_cons (x0 X6715) (Map2 x0 XS6916) c_bot_natlist c_cons_x53_xs55 c_error_natlist c_nil) c_error_natlist (K_nil c_bot_natlist c_cons_x53_xs55 c_error_natlist c_nil).
+Main x0 c_bot_natlist c_cons_x53_xs55 c_error_natlist c_nil  -> Map2 Head6 (Filter3 NE4 x0) c_bot_natlist c_cons_x53_xs55 c_error_natlist c_nil.
+XS6916 c_bot_natlistt c_conss_x67_xs69 c_error_natlistt c_nill  -> br c_bot_natlistt (XS69 c_bot_natlistt c_conss_x67_xs69 c_error_natlistt c_nill).
+X6715 c_bot_natlist c_cons_x53_xs55 c_error_natlist c_nil  -> br c_bot_natlist (X67 c_bot_natlist c_cons_x53_xs55 c_error_natlist c_nil).
+XS6114 c_bot_natlistt c_conss_x67_xs69 c_error_natlistt c_nill  -> br c_bot_natlistt (XS61 c_bot_natlistt c_conss_x67_xs69 c_error_natlistt c_nill).
+P5713 x0 c_bot_bool c_error_bool c_false c_true  -> br c_bot_bool (P57 x0 c_bot_bool c_error_bool c_false c_true).
+X5912 c_bot_natlist c_cons_x53_xs55 c_error_natlist c_nil  -> br c_bot_natlist (X59 c_bot_natlist c_cons_x53_xs55 c_error_natlist c_nil).
+X4111 c_bot_nat c_error_nat c_x103  -> br c_bot_nat (X41 c_bot_nat c_error_nat c_x103).
+N10 c_bot_nat c_error_nat c_x103  -> br c_bot_nat (N c_bot_nat c_error_nat c_x103).
+ListN9 c_bot_natlist c_cons_x53_xs55 c_error_natlist c_nil  -> br c_bot_natlist (ListN c_bot_natlist c_cons_x53_xs55 c_error_natlist c_nil).
+ListNN8 c_bot_natlistt c_conss_x67_xs69 c_error_natlistt c_nill  -> br c_bot_natlistt (ListNN c_bot_natlistt c_conss_x67_xs69 c_error_natlistt c_nill).
+S7 c_bot_natlistt c_conss_x67_xs69 c_error_natlistt c_nill  -> br c_bot_natlistt (S c_bot_natlistt c_conss_x67_xs69 c_error_natlistt c_nill).
+Head6 x0 c_bot_nat c_error_nat c_x103  -> br c_bot_nat (Head x0 c_bot_nat c_error_nat c_x103).
+If5 x0 x1 x2 c_bot_natlistt c_conss_x67_xs69 c_error_natlistt c_nill  -> br c_bot_natlistt (If x0 x1 x2 c_bot_natlistt c_conss_x67_xs69 c_error_natlistt c_nill).
+NE4 x0 c_bot_bool c_error_bool c_false c_true  -> br c_bot_bool (NE x0 c_bot_bool c_error_bool c_false c_true).
+Filter3 x0 x1 c_bot_natlistt c_conss_x67_xs69 c_error_natlistt c_nill  -> br c_bot_natlistt (Filter x0 x1 c_bot_natlistt c_conss_x67_xs69 c_error_natlistt c_nill).
+Map2 x0 x1 c_bot_natlist c_cons_x53_xs55 c_error_natlist c_nil  -> br c_bot_natlist (Map x0 x1 c_bot_natlist c_cons_x53_xs55 c_error_natlist c_nil).
+Main1 x0 c_bot_natlist c_cons_x53_xs55 c_error_natlist c_nil  -> br c_bot_natlist (Main x0 c_bot_natlist c_cons_x53_xs55 c_error_natlist c_nil).
+%ENDG
+%BEGINA
+q0 c_nil -> .
+q0 c_cons_x53_xs55 -> .
+q0 c_bot_natlist -> .
+q0 br -> q0 q0 .
+%ENDA

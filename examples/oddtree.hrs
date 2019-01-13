@@ -1,0 +1,24 @@
+%BEGING
+S -> F One Three.
+F x y -> br x (F y (Plus x y)).
+Plus x y -> s x y.
+One -> e.
+Three -> s (s e e) e.
+%ENDG
+%BEGINR
+br -> 2.
+s -> 2.
+e -> 0.
+%ENDR
+
+%BEGINATA
+q0 br -> (1,odd) /\ (2,q0).
+q0 s -> false.
+q0 e -> false.
+odd br -> false.
+odd s -> ((1,even) /\ (2,odd)) \/ ((1,odd)/\(2,even)).
+odd e -> true.
+even br -> false.
+even s -> ((1,even) /\ (2,even)) \/ ((1,odd)/\(2,odd)).
+even e -> false.
+%ENDATA

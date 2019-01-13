@@ -1,0 +1,26 @@
+/* Taken from an example of MFT verification by Kazuhiro Abe */
+/* The example uses _fun expressions (a la fun expressions in Ocaml), which are supported from
+   version 0.94 
+*/
+
+%BEGING
+/* main x = let (f,g)=(Fib x, Aux x) in f */
+S -> FibAux_In3x0 (_fun f g -> f nil).
+FibAux_In3x0 k -> br (k I (b nil)) (FibAux_In3x2 (_fun f g -> k (Concat f g) f)).
+FibAux_In3x2 k -> FibAux_In3x1 (_fun f g -> k (Concat f g) f).
+FibAux_In3x1 k -> FibAux_In3x0 (_fun f g -> k (Concat f g) f).
+Concat f g x -> f (g x).
+/* empty sequence () */
+I x -> x.
+%ENDG
+
+/* b[], b[], ... is represented as
+  b end (b end (b end ... (b end end)...))
+*/
+%BEGINA
+q0 b -> nil q1.
+q0 br -> q0 q0.
+q1 b -> nil q0.
+q0 nil -> .
+nil nil -> .
+%ENDA

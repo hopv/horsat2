@@ -1,0 +1,47 @@
+%BEGING
+S -> Twice7 F Fst b a.
+Twice7 f x -> Twice (Twice6 f) x.
+Twice6 f x -> Twice (Twice5 f) x.
+Twice5 f x -> Twice (Twice4 f) x.
+Twice4 f x -> Twice (Twice f) x.
+Fst x y -> x e.
+F k x y -> k y (Concat y x).
+Twice f k x y -> f (f k) x y.
+Concat x y c -> x(y c).
+%ENDG
+
+/* contains ab? 
+%BEGINA
+q0 a -> q1.
+q0 b -> q0.
+q1 a -> q1.
+q1 b -> q2.
+q2 a -> q2.
+q2 b -> q2.
+q2 e -> .
+%ENDA
+ */
+
+/* contains bb? 
+%BEGINA
+q0 a -> q0.
+q0 b -> q1.
+q1 a -> q0.
+q1 b -> q2.
+q2 a -> q2.
+q2 b -> q2.
+q2 e -> .
+%ENDA
+*/
+
+/* does not contain bb? */
+%BEGINA
+q0 a -> q0.
+q0 b -> q1.
+q1 a -> q0.
+q1 b -> q2.
+q2 a -> q2.
+q2 b -> q2.
+q0 e -> .
+q1 e -> .
+%ENDA
