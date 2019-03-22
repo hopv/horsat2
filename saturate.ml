@@ -1020,10 +1020,20 @@ let register_nte nt ity =
 let update_incremental_ty_of_id termid (id,tys) overwrite_flag = 
   let envs = Ai.lookup_dep_id_envs termid in
    List.iter (fun env -> 
-      if List.exists (fun (_,_,_,id1)->id=id1) env then 
+      match List.filter (fun (_,_,_,id1)->id=id1) env with
+        [] -> ()
+      | [_] -> 
+          let venvs = mk_venvs_mask_incremental env (id,tys) in
+          update_ty_of_id_aux termid venvs overwrite_flag
+     | _ -> 
+          let venvs = mk_venvs_mask env in
+          update_ty_of_id_aux termid venvs overwrite_flag
+(* old code: does not work when id occurs more than once in env 
+      if List.exists (fun (_,_,_,id1)->id=id1) env then  
         let venvs = mk_venvs_mask_incremental env (id,tys) in
         update_ty_of_id_aux termid venvs overwrite_flag
       else ()
+*)
    ) envs
 
 let update_ty_of_nt_aux nt venvs qs =
