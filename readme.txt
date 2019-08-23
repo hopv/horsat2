@@ -1,5 +1,8 @@
 HorSat2 version 0.92  (c) 2015 by Naoki Kobayashi and Taku Terao
 
+HorSat2 is a model checker for higher-order recursion schemes (HORS).
+A web demo is available at http://www-kb.is.s.u-tokyo.ac.jp/~koba/horsat2/
+
 License
 --------
 HorSat2 is released under the terms of the GPL version 3.0.
