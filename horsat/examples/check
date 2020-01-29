@@ -1,5 +1,0 @@
-#!/bin/sh
-./test | grep property > foo.txt
-diff foo.txt test-correct-result.txt
-echo 'done'
-
