@@ -1,0 +1,24 @@
+/* encoding of strictness analysis */
+
+%BEGING
+S -> F False True G C.
+F x y g k -> br (FP x y g k) (tracked (FP x (Mark y) g k)).
+FP x y g k -> If x (G y k) (br (F True y g k) (F False y g k)).
+Mark y z w -> used (y z w).
+G y k ->k y.
+C b -> b end end.
+If x y z -> x y z.
+True x y -> x.
+False x y -> y.
+%ENDG
+
+/* whenever tracked occurs, used occurs afterwards (in any finite path) */
+%BEGINA
+q0 br -> q0 q0.
+q1 br -> q1 q1.
+q0 end -> .
+q0 tracked -> q1.
+q1 tracked -> q1.
+q0 used -> q0.
+q1 used -> q0.
+%ENDA

@@ -1,0 +1,28 @@
+/* application of model checking to 
+   decide the inclusion between a CFL and a RL
+ */
+/**  
+ context free language : {a^nb^n | n >=0 }
+ S -> epsilon | A S B
+ A -> a
+ B -> b
+**/
+%BEGING
+S1 -> S e.
+S k -> or (E k) (Concat A (Concat S B) k).
+E k -> k.
+A k -> a k.
+B k -> b k.
+Concat x y k -> x (y k).
+%ENDG
+
+%BEGINA
+/* regular language : a*b*  */
+q0 or -> q0 q0.
+q1 or -> q1 q1.
+q0 a -> q0.
+q0 b -> q1.
+q1 b -> q1.
+q0 e -> .
+q1 e -> .
+%ENDA

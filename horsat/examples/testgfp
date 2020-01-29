@@ -1,0 +1,33 @@
+#!/bin/sh
+horsat -gfp cfg.hrs
+horsat -gfp example2.1.hrs
+horsat -gfp example2.2.hrs
+horsat -gfp example3.1.hrs
+horsat -gfp example3.2.hrs
+horsat -gfp example3.3.hrs
+horsat -gfp example3.5.hrs
+horsat -gfp example3.6.hrs
+horsat -gfp example3.7.hrs
+horsat -gfp example5.2.hrs
+horsat -gfp exp2-5.hrs
+horsat -gfp exp2-5-wrong.hrs
+#horsat -gfp exp3-5.hrs
+#horsat -gfp exp4-5.hrs      
+#horsat -gfp exp4-5-wrong.hrs
+horsat -gfp fibstring2.hrs
+horsat -gfp file.hrs
+horsat -gfp filewrong.hrs
+horsat -gfp fileocamlc.hrs
+horsat -gfp lock2.hrs  
+horsat -gfp order5.hrs
+horsat -gfp order5-2.hrs 
+horsat -gfp repeat-2.hrs
+horsat -gfp twofiles.hrs
+horsat -gfp twofilesexn.hrs
+horsat -gfp mc91-2.hrs
+
+
+
+
+
+

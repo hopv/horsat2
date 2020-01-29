@@ -1,0 +1,12 @@
+/*** Examples 2.2 ***/
+
+%BEGING
+S -> G (F G).
+G x -> G (F G).
+F g -> g (G c).
+%ENDG
+
+%BEGINA /* br does not occur below a */
+q0 c -> .
+%ENDA
+

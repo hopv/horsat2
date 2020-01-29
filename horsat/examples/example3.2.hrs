@@ -1,0 +1,27 @@
+%BEGING
+S -> Newr (G end).
+G k x -> br (Read x k) (Close x (G k x)).
+Newr k -> br (newr (k I)) (k K).
+I x y -> x y.
+K x y -> y.
+Close x k -> x close k.
+Read x k -> x read k.
+%ENDG
+
+%BEGINA
+q0 br -> q0 q0.
+qr br -> qr qr.
+qc br -> qc qc.
+q1 br -> q1 q1.
+q0 newr -> qr.
+qr newr -> q1.
+qc newr -> q1.
+q1 newr -> q1.
+qr read -> qr.
+qr close -> qc.
+q1 read -> q1.
+q1 close -> q1.
+qc end ->.
+q0 end ->.
+q1 end ->.
+%ENDA

@@ -1,0 +1,16 @@
+/*** An example of exception analysis, inspired by 
+ ***  an example in Leroy & Pessaux, "Type-Based Analysis of Uncaught Exceptionis, " TOPLAS, 2000
+ ***/
+
+%BEGING
+S -> G dummy uncaught uncaught end.
+Failwith0 failure0 failure1 k -> failure0.
+Failwith1 failure0 failure1 k -> failure1.
+F x failure0 failure1 k -> br k (Failwith0 failure0 failure1 k).
+G x failure0 failure1 k -> F x k failure1 k.
+%ENDG
+
+%BEGINA
+q0 br -> q0 q0.
+q0 end -> .
+%ENDA

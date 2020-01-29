@@ -1,0 +1,42 @@
+/*** A slight variant of order5.hrs ***/
+
+%BEGING
+S -> GenConsume Newr Read Close (GenConsume Neww Write Close end). /** (GenConsume Neww F2 end). **/
+GenConsume gen use finish k -> gen (Use use finish k).
+Use use finish k x -> Loop use x (finish x k).
+Loop use x k -> br k (Loop use x (use x k)). /*** non-tail recursion ***/
+C use k x -> use x k.
+I x y -> x y.
+K x y -> y.
+Newr k -> br (newr (k I)) (k K).
+Neww k -> br (neww (k I)) (k K).
+Close x k -> x close k.
+Read x k -> x read k.
+Write y k -> y write k.
+%ENDG
+
+%BEGINA
+q0 br -> q0 q0.
+qr br -> qr qr.
+qw br -> qw qw.
+qrw br -> qrw qrw.
+q0 newr -> qr.
+qr read -> qr.
+qr close -> qc.
+qc br -> qc qc.
+q0 neww -> qw.
+qw write -> qw.
+qw close -> qc.
+qw newr -> qrw.
+qr neww -> qrw.
+qc newr -> qrw.
+qc neww -> qrw.
+qrw newr -> qrw.
+qrw neww -> qrw.
+qrw read -> qrw.
+qrw write -> qrw.
+qrw close -> qrw.
+qc end ->.
+q0 end ->.
+qrw end ->.
+%ENDA

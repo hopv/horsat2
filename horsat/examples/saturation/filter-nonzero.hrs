@@ -1,0 +1,57 @@
+%BEGING
+S_S88  -> S88 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66.
+KK_c_cons_x41_xs4376 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66  -> c_cons_x41_xs4376.
+KK_c_nil74 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66  -> c_nil74.
+KK_c_succ__3772 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66  -> c_succ__3772.
+KK_c_z70 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66  -> c_z70.
+KK_c_true68 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66  -> c_true68.
+KK_c_false66 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66  -> c_false66.
+KK_z x0 x1 x2 x3 x4 x5  -> z.
+KK_succ n x0 x1 x2 x3 x4 x5  -> succ (n x0 x1 x2 x3 x4 x5).
+KK_nil x0 x1 x2 x3 x4 x5  -> nil.
+KK_cons y ys x0 x1 x2 x3 x4 x5  -> cons (y x0 x1 x2 x3 x4 x5) (ys x0 x1 x2 x3 x4 x5).
+S88 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66  -> Pi184 SSSSS c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66.
+SSSSS132 x0 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66  -> SSSSS x0 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66.
+XS43130 x0 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66  -> XS43 x0 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66.
+X41128 x0 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66  -> X41 x0 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66.
+N126 x0 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66  -> N x0 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66.
+ListN124 x0 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66  -> ListN x0 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66.
+S122 x0 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66  -> S x0 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66.
+If120 x0 x1 x2 x3 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66  -> If (Pi286 x0) x1 x2 x3 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66.
+Nz118 x0 x1 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66  -> Nz (Pi286 x0) x1 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66.
+Filter116 x0 x1 x2 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66  -> Filter x0 (Pi286 x1) x2 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66.
+Main114 x0 x1 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66  -> Main x0 x1 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66.
+Main x0 x1 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66  -> Filter116 Nz118 x0 x1 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66.
+Filter x0 x1 x2 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66  -> x1 (If120 (x0 X41128) (P_cons104 X41128 (Filter116 x0 XS43130)) (Filter116 x0 XS43130) x2 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66) (P_nil100 x2 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66) bot bot bot bot.
+Nz x0 x1 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66  -> x0 bot bot (P_true112 x1 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66) (P_false108 x1 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66) bot bot.
+If x0 x1 x2 x3 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66  -> x0 bot bot bot bot (x1 x3 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66) (x2 x3 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66).
+S x0 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66  -> ListN124 x0 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66.
+ListN x0 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66  -> br (P_nil100 x0 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66) (P_cons104 N126 ListN124 x0 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66).
+N x0 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66  -> br (P_z92 x0 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66) (P_succ96 N126 x0 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66).
+X41 x0 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66  -> N126 x0 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66.
+XS43 x0 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66  -> ListN124 x0 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66.
+SSSSS x0 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66  -> Main114 S122 x0 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66.
+P_z92 x0 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66  -> Pair78 KK_z K_z90 x0 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66.
+K_z90 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66  -> c_z70.
+P_succ96 x0 x1 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66  -> br (Pair78 (KK_succ (Pi184 x0)) (K_succ94 (Pi286 x0)) x1 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66) (Pair78 (KK_succ (Pi184 x0)) KK_c_succ__3772 x1 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66).
+K_succ94 x0 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66  -> x0 bot bot c_succ__3772 c_succ__3772 bot bot.
+P_nil100 x0 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66  -> Pair78 KK_nil K_nil98 x0 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66.
+K_nil98 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66  -> c_nil74.
+P_cons104 x0 x1 x2 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66  -> br (Pair78 (KK_cons (Pi184 x0) (Pi184 x1)) (K_cons102 (Pi286 x0) (Pi286 x1)) x2 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66) (Pair78 (KK_cons (Pi184 x0) (Pi184 x1)) KK_c_cons_x41_xs4376 x2 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66).
+K_cons102 x0 x1 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66  -> x0 (x1 bot bot bot bot bot bot) (x1 bot bot bot bot bot bot) (x1 c_cons_x41_xs4376 c_cons_x41_xs4376 bot bot bot bot) (x1 c_cons_x41_xs4376 c_cons_x41_xs4376 bot bot bot bot) (x1 bot bot bot bot bot bot) (x1 bot bot bot bot bot bot).
+P_false108 x0 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66  -> Pair78 false K_false106 x0 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66.
+K_false106 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66  -> c_false66.
+P_true112 x0 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66  -> Pair78 true K_true110 x0 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66.
+K_true110 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66  -> c_true68.
+K180 x0 x1 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66  -> x0 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66.
+K282 x0 x1 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66  -> x1 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66.
+Pi184 x0 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66  -> x0 K180 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66.
+Pi286 x0 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66  -> x0 K282 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66.
+Pair78 x0 x1 x2 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66  -> x2 x0 x1 c_cons_x41_xs4376 c_nil74 c_succ__3772 c_z70 c_true68 c_false66.
+%ENDG
+%BEGINA
+q0 succ -> q0 .
+q0 nil -> .
+q0 cons -> q0 q0 .
+q0 br -> q0 q0 .
+%ENDA

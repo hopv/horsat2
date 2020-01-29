@@ -1,0 +1,54 @@
+%BEGING
+S_SSSSS12  -> SSSSS12 c_bot_natlistt c_conss_y50_ys52 c_error_natlistt c_nill.
+KK_c_bot_nat c_bot_nat c_error_nat c_x82  -> c_bot_nat.
+KK_c_error_nat c_bot_nat c_error_nat c_x82  -> c_error_nat.
+KK_c_x82 c_bot_nat c_error_nat c_x82  -> c_x82.
+KK_c_bot_natlist c_bot_natlist c_cons_x40_xs42 c_error_natlist c_nil  -> c_bot_natlist.
+KK_c_cons_x40_xs42 c_bot_natlist c_cons_x40_xs42 c_error_natlist c_nil  -> c_cons_x40_xs42.
+KK_c_error_natlist c_bot_natlist c_cons_x40_xs42 c_error_natlist c_nil  -> c_error_natlist.
+KK_c_nil c_bot_natlist c_cons_x40_xs42 c_error_natlist c_nil  -> c_nil.
+KK_c_bot_natlistt c_bot_natlistt c_conss_y50_ys52 c_error_natlistt c_nill  -> c_bot_natlistt.
+KK_c_conss_y50_ys52 c_bot_natlistt c_conss_y50_ys52 c_error_natlistt c_nill  -> c_conss_y50_ys52.
+KK_c_error_natlistt c_bot_natlistt c_conss_y50_ys52 c_error_natlistt c_nill  -> c_error_natlistt.
+KK_c_nill c_bot_natlistt c_conss_y50_ys52 c_error_natlistt c_nill  -> c_nill.
+SSSSS12 c_bot_natlistt c_conss_y50_ys52 c_error_natlistt c_nill  -> br c_bot_natlistt (SSSSS c_bot_natlistt c_conss_y50_ys52 c_error_natlistt c_nill).
+K_conss x0 x1 c_bot_natlistt c_conss_y50_ys52 c_error_natlistt c_nill  -> x0 (x1 c_conss_y50_ys52 c_conss_y50_ys52 c_error_natlistt c_conss_y50_ys52) (x1 c_conss_y50_ys52 c_conss_y50_ys52 c_error_natlistt c_conss_y50_ys52) (x1 c_error_natlistt c_error_natlistt c_error_natlistt c_error_natlistt) (x1 c_conss_y50_ys52 c_conss_y50_ys52 c_error_natlistt c_conss_y50_ys52).
+K_error c_bot_natlistt c_conss_y50_ys52 c_error_natlistt c_nill  -> c_error_natlistt.
+K_nill c_bot_natlistt c_conss_y50_ys52 c_error_natlistt c_nill  -> c_nill.
+K_cons x0 x1 c_bot_natlist c_cons_x40_xs42 c_error_natlist c_nil  -> x0 (x1 c_cons_x40_xs42 c_cons_x40_xs42 c_error_natlist c_cons_x40_xs42) (x1 c_error_natlist c_error_natlist c_error_natlist c_error_natlist) (x1 c_cons_x40_xs42 c_cons_x40_xs42 c_error_natlist c_cons_x40_xs42).
+K_nil c_bot_natlist c_cons_x40_xs42 c_error_natlist c_nil  -> c_nil.
+K_succ x0 c_bot_nat c_error_nat c_x82  -> x0 c_x82 c_error_nat c_x82.
+K_z c_bot_nat c_error_nat c_x82  -> c_x82.
+K_error_nat c_bot_nat c_error_nat c_x82  -> c_error_nat.
+K_error_natlist c_bot_natlist c_cons_x40_xs42 c_error_natlist c_nil  -> c_error_natlist.
+K_error_natlistt c_bot_natlistt c_conss_y50_ys52 c_error_natlistt c_nill  -> c_error_natlistt.
+SSSSS c_bot_natlistt c_conss_y50_ys52 c_error_natlistt c_nill  -> Main1 S5 c_bot_natlistt c_conss_y50_ys52 c_error_natlistt c_nill.
+YS52 c_bot_natlistt c_conss_y50_ys52 c_error_natlistt c_nill  -> K_nill c_bot_natlistt c_conss_y50_ys52 c_error_natlistt c_nill.
+Y50 c_bot_natlist c_cons_x40_xs42 c_error_natlist c_nil  -> K_nil c_bot_natlist c_cons_x40_xs42 c_error_natlist c_nil.
+XS42 c_bot_natlist c_cons_x40_xs42 c_error_natlist c_nil  -> ListN6 c_bot_natlist c_cons_x40_xs42 c_error_natlist c_nil.
+X40 c_bot_nat c_error_nat c_x82  -> N7 c_bot_nat c_error_nat c_x82.
+N c_bot_nat c_error_nat c_x82  -> br (K_z c_bot_nat c_error_nat c_x82) (K_succ N7 c_bot_nat c_error_nat c_x82).
+ListN c_bot_natlist c_cons_x40_xs42 c_error_natlist c_nil  -> br (K_nil c_bot_natlist c_cons_x40_xs42 c_error_natlist c_nil) (K_cons N7 ListN6 c_bot_natlist c_cons_x40_xs42 c_error_natlist c_nil).
+S c_bot_natlist c_cons_x40_xs42 c_error_natlist c_nil  -> ListN6 c_bot_natlist c_cons_x40_xs42 c_error_natlist c_nil.
+Foldr x0 x1 x2 c_bot_natlistt c_conss_y50_ys52 c_error_natlistt c_nill  -> x2 c_bot_natlistt (x0 X408 (Foldr4 x0 x1 XS429) c_bot_natlistt c_conss_y50_ys52 c_error_natlistt c_nill) c_error_natlistt (x1 c_bot_natlistt c_conss_y50_ys52 c_error_natlistt c_nill).
+Tails_2 x0 x1 c_bot_natlistt c_conss_y50_ys52 c_error_natlistt c_nill  -> x1 c_bot_natlistt (K_conss (K_cons x0 Y5010) (K_conss Y5010 YS5211) c_bot_natlistt c_conss_y50_ys52 c_error_natlistt c_nill) c_error_natlistt (K_error c_bot_natlistt c_conss_y50_ys52 c_error_natlistt c_nill).
+Tails x0 c_bot_natlistt c_conss_y50_ys52 c_error_natlistt c_nill  -> Foldr4 Tails_23 (K_conss K_nil K_nill) x0 c_bot_natlistt c_conss_y50_ys52 c_error_natlistt c_nill.
+Main x0 c_bot_natlistt c_conss_y50_ys52 c_error_natlistt c_nill  -> Tails2 x0 c_bot_natlistt c_conss_y50_ys52 c_error_natlistt c_nill.
+YS5211 c_bot_natlistt c_conss_y50_ys52 c_error_natlistt c_nill  -> br c_bot_natlistt (YS52 c_bot_natlistt c_conss_y50_ys52 c_error_natlistt c_nill).
+Y5010 c_bot_natlist c_cons_x40_xs42 c_error_natlist c_nil  -> br c_bot_natlist (Y50 c_bot_natlist c_cons_x40_xs42 c_error_natlist c_nil).
+XS429 c_bot_natlist c_cons_x40_xs42 c_error_natlist c_nil  -> br c_bot_natlist (XS42 c_bot_natlist c_cons_x40_xs42 c_error_natlist c_nil).
+X408 c_bot_nat c_error_nat c_x82  -> br c_bot_nat (X40 c_bot_nat c_error_nat c_x82).
+N7 c_bot_nat c_error_nat c_x82  -> br c_bot_nat (N c_bot_nat c_error_nat c_x82).
+ListN6 c_bot_natlist c_cons_x40_xs42 c_error_natlist c_nil  -> br c_bot_natlist (ListN c_bot_natlist c_cons_x40_xs42 c_error_natlist c_nil).
+S5 c_bot_natlist c_cons_x40_xs42 c_error_natlist c_nil  -> br c_bot_natlist (S c_bot_natlist c_cons_x40_xs42 c_error_natlist c_nil).
+Foldr4 x0 x1 x2 c_bot_natlistt c_conss_y50_ys52 c_error_natlistt c_nill  -> br c_bot_natlistt (Foldr x0 x1 x2 c_bot_natlistt c_conss_y50_ys52 c_error_natlistt c_nill).
+Tails_23 x0 x1 c_bot_natlistt c_conss_y50_ys52 c_error_natlistt c_nill  -> br c_bot_natlistt (Tails_2 x0 x1 c_bot_natlistt c_conss_y50_ys52 c_error_natlistt c_nill).
+Tails2 x0 c_bot_natlistt c_conss_y50_ys52 c_error_natlistt c_nill  -> br c_bot_natlistt (Tails x0 c_bot_natlistt c_conss_y50_ys52 c_error_natlistt c_nill).
+Main1 x0 c_bot_natlistt c_conss_y50_ys52 c_error_natlistt c_nill  -> br c_bot_natlistt (Main x0 c_bot_natlistt c_conss_y50_ys52 c_error_natlistt c_nill).
+%ENDG
+%BEGINA
+q0 c_nill -> .
+q0 c_conss_y50_ys52 -> .
+q0 c_bot_natlistt -> .
+q0 br -> q0 q0 .
+%ENDA

@@ -1,0 +1,17 @@
+/*** let rec g x = if * then close(x) else read(x); g(x) in
+ *** let fp = open_in "foo" in
+ ***  g fp
+ ***/
+
+%BEGING
+S -> F end.
+F k -> br (close k) (read (F k)).
+%ENDG
+
+%BEGINA
+q0 br -> q0 q0.
+qc br -> qc qc.
+qc end ->.
+q0 read -> q0.
+q0 close -> qc.
+%ENDA

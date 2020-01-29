@@ -1,0 +1,59 @@
+%BEGING
+RSFDStart -> S_1 B0.
+S_1 x -> F_1 x leaf.
+F_1 x y -> Gapid_1 True_1 x A_1 y.
+Gapid_1 n x v y ->  x (Gapid1_1 v y doc B7 B6) (br (br (Gapid1_1 v y div B4 B1) (Gapid1_1 v y p B3 B1)) (br (Gapid1_1 v y note B5 B1) (Gapid2_1 v y n))) (br (Gapid1_1 v y p B3 B2) (Gapid2_1 v y n)) (br (Gapid1_1 v y a B3 B3) (Gapid2_1 v y n)) (br (br (Gapid1_1 v y div B4 B4) (Gapid1_1 v y p B3 B4)) (br (Gapid1_1 v y note B5 B4) (br (Gapid1_1 v y a B3 B4) (Gapid2_1 v y n)))) (br (Gapid1_1 v y p B3 B5) (br (Gapid1_1 v y a B3 B5) (Gapid2_1 v y n))) (Gapid2_1 v y n) (Gapid1_1 v y preface B8 B1) (Gapid1_1 v y header B3 B2).
+True_1 x y -> x.
+A_1 x -> a leaf x.
+Gapid2_1 v x n -> If_1 n (Box_1 v x) (Nogap_1 Leaf_1 v x).
+Gapid1_1 v x l x1 x2 -> Conc_1 (Node_1 l (Gapid_1 True_1 x1)) (Gapid_1 False_1 x2) v x.
+If_1 b x y -> b x y.
+Box_1 v x -> v x.
+Nogap_1 w v x -> w x.
+Leaf_1 x -> x.
+Conc_1 p q v x -> p v (q v x).
+Node_1 l p v x -> l (p v leaf) x.
+False_1 x y -> y.
+B0 x0 x1 x2 x3 x4 x5 x6 x7 x8 -> x0.
+B1 x0 x1 x2 x3 x4 x5 x6 x7 x8 -> x1.
+B2 x0 x1 x2 x3 x4 x5 x6 x7 x8 -> x2.
+B3 x0 x1 x2 x3 x4 x5 x6 x7 x8 -> x3.
+B4 x0 x1 x2 x3 x4 x5 x6 x7 x8 -> x4.
+B5 x0 x1 x2 x3 x4 x5 x6 x7 x8 -> x5.
+B6 x0 x1 x2 x3 x4 x5 x6 x7 x8 -> x6.
+B7 x0 x1 x2 x3 x4 x5 x6 x7 x8 -> x7.
+B8 x0 x1 x2 x3 x4 x5 x6 x7 x8 -> x8.
+%ENDG
+
+%BEGINA
+q0 doc -> q13 q12.
+q0 br -> q0 q0.
+q13 preface -> q14 q7.
+q13 br -> q13 q13.
+q12 leaf -> .
+q12 br -> q12 q12.
+q14 header -> q9 q8.
+q14 br -> q14 q14.
+q7 div -> q10 q7.
+q7 p -> q9 q7.
+q7 note -> q11 q7.
+q7 leaf -> .
+q7 br -> q7 q7.
+q8 p -> q9 q8.
+q8 leaf -> .
+q8 br -> q8 q8.
+q10 div -> q10 q10.
+q10 p -> q9 q10.
+q10 note -> q11 q10.
+q10 a -> q9 q10.
+q10 leaf -> .
+q10 br -> q10 q10.
+q9 a -> q9 q9.
+q9 leaf -> .
+q9 br -> q9 q9.
+q11 p -> q9 q11.
+q11 a -> q9 q11.
+q11 leaf -> .
+q11 br -> q11 q11.
+
+%ENDA

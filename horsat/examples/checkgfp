@@ -1,0 +1,5 @@
+#!/bin/sh
+./testgfp | grep property > foo.txt
+diff foo.txt testgfp-correct-result.txt
+echo 'done'
+

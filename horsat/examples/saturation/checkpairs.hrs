@@ -1,0 +1,56 @@
+%BEGING
+S_SSSSS12  -> SSSSS12 c_bot_o c_error_o c_x65.
+KK_c_bot_bool c_bot_bool c_error_bool c_false c_true  -> c_bot_bool.
+KK_c_error_bool c_bot_bool c_error_bool c_false c_true  -> c_error_bool.
+KK_c_false c_bot_bool c_error_bool c_false c_true  -> c_false.
+KK_c_true c_bot_bool c_error_bool c_false c_true  -> c_true.
+KK_c_bot_nat c_bot_nat c_error_nat c_succ_x43 c_z  -> c_bot_nat.
+KK_c_error_nat c_bot_nat c_error_nat c_succ_x43 c_z  -> c_error_nat.
+KK_c_succ_x43 c_bot_nat c_error_nat c_succ_x43 c_z  -> c_succ_x43.
+KK_c_z c_bot_nat c_error_nat c_succ_x43 c_z  -> c_z.
+KK_c_bot_natpair c_bot_natpair c_error_natpair c_pair_x45_y47  -> c_bot_natpair.
+KK_c_error_natpair c_bot_natpair c_error_natpair c_pair_x45_y47  -> c_error_natpair.
+KK_c_pair_x45_y47 c_bot_natpair c_error_natpair c_pair_x45_y47  -> c_pair_x45_y47.
+KK_c_bot_o c_bot_o c_error_o c_x65  -> c_bot_o.
+KK_c_error_o c_bot_o c_error_o c_x65  -> c_error_o.
+KK_c_x65 c_bot_o c_error_o c_x65  -> c_x65.
+SSSSS12 c_bot_o c_error_o c_x65  -> br c_bot_o (SSSSS c_bot_o c_error_o c_x65).
+K_ok c_bot_o c_error_o c_x65  -> c_x65.
+K_false c_bot_bool c_error_bool c_false c_true  -> c_false.
+K_true c_bot_bool c_error_bool c_false c_true  -> c_true.
+K_pair x0 x1 c_bot_natpair c_error_natpair c_pair_x45_y47  -> x0 (x1 c_pair_x45_y47 c_error_natpair c_pair_x45_y47 c_pair_x45_y47) (x1 c_error_natpair c_error_natpair c_error_natpair c_error_natpair) (x1 c_pair_x45_y47 c_error_natpair c_pair_x45_y47 c_pair_x45_y47) (x1 c_pair_x45_y47 c_error_natpair c_pair_x45_y47 c_pair_x45_y47).
+K_succ x0 c_bot_nat c_error_nat c_succ_x43 c_z  -> x0 c_succ_x43 c_error_nat c_succ_x43 c_succ_x43.
+K_z c_bot_nat c_error_nat c_succ_x43 c_z  -> c_z.
+K_error_bool c_bot_bool c_error_bool c_false c_true  -> c_error_bool.
+K_error_nat c_bot_nat c_error_nat c_succ_x43 c_z  -> c_error_nat.
+K_error_natpair c_bot_natpair c_error_natpair c_pair_x45_y47  -> c_error_natpair.
+K_error_o c_bot_o c_error_o c_x65  -> c_error_o.
+SSSSS c_bot_o c_error_o c_x65  -> Main1 S5 c_bot_o c_error_o c_x65.
+Y47 c_bot_nat c_error_nat c_succ_x43 c_z  -> N7 c_bot_nat c_error_nat c_succ_x43 c_z.
+X45 c_bot_nat c_error_nat c_succ_x43 c_z  -> N7 c_bot_nat c_error_nat c_succ_x43 c_z.
+Q39 c_bot_nat c_error_nat c_succ_x43 c_z  -> N7 c_bot_nat c_error_nat c_succ_x43 c_z.
+P37 c_bot_nat c_error_nat c_succ_x43 c_z  -> N7 c_bot_nat c_error_nat c_succ_x43 c_z.
+N c_bot_nat c_error_nat c_succ_x43 c_z  -> br (K_z c_bot_nat c_error_nat c_succ_x43 c_z) (K_succ N7 c_bot_nat c_error_nat c_succ_x43 c_z).
+PairN c_bot_natpair c_error_natpair c_pair_x45_y47  -> K_pair N7 N7 c_bot_natpair c_error_natpair c_pair_x45_y47.
+S c_bot_natpair c_error_natpair c_pair_x45_y47  -> PairN6 c_bot_natpair c_error_natpair c_pair_x45_y47.
+If x0 x1 x2 c_bot_o c_error_o c_x65  -> x0 c_bot_o c_error_o (x2 c_bot_o c_error_o c_x65) (x1 c_bot_o c_error_o c_x65).
+Lt x0 x1 c_bot_bool c_error_bool c_false c_true  -> x0 (x1 c_bot_bool c_error_bool c_bot_bool c_bot_bool) (x1 c_error_bool c_error_bool c_error_bool c_error_bool) (x1 c_bot_bool c_error_bool (Lt3 P378 Q399 c_bot_bool c_error_bool c_false c_true) (K_false c_bot_bool c_error_bool c_false c_true)) (x1 c_bot_bool c_error_bool (K_true c_bot_bool c_error_bool c_false c_true) (K_false c_bot_bool c_error_bool c_false c_true)).
+Check x0 c_bot_o c_error_o c_x65  -> x0 c_bot_o c_error_o (If4 (Lt3 X4510 Y4711) K_ok K_error_o c_bot_o c_error_o c_x65).
+Main x0 c_bot_o c_error_o c_x65  -> Check2 x0 c_bot_o c_error_o c_x65.
+Y4711 c_bot_nat c_error_nat c_succ_x43 c_z  -> br c_bot_nat (Y47 c_bot_nat c_error_nat c_succ_x43 c_z).
+X4510 c_bot_nat c_error_nat c_succ_x43 c_z  -> br c_bot_nat (X45 c_bot_nat c_error_nat c_succ_x43 c_z).
+Q399 c_bot_nat c_error_nat c_succ_x43 c_z  -> br c_bot_nat (Q39 c_bot_nat c_error_nat c_succ_x43 c_z).
+P378 c_bot_nat c_error_nat c_succ_x43 c_z  -> br c_bot_nat (P37 c_bot_nat c_error_nat c_succ_x43 c_z).
+N7 c_bot_nat c_error_nat c_succ_x43 c_z  -> br c_bot_nat (N c_bot_nat c_error_nat c_succ_x43 c_z).
+PairN6 c_bot_natpair c_error_natpair c_pair_x45_y47  -> br c_bot_natpair (PairN c_bot_natpair c_error_natpair c_pair_x45_y47).
+S5 c_bot_natpair c_error_natpair c_pair_x45_y47  -> br c_bot_natpair (S c_bot_natpair c_error_natpair c_pair_x45_y47).
+If4 x0 x1 x2 c_bot_o c_error_o c_x65  -> br c_bot_o (If x0 x1 x2 c_bot_o c_error_o c_x65).
+Lt3 x0 x1 c_bot_bool c_error_bool c_false c_true  -> br c_bot_bool (Lt x0 x1 c_bot_bool c_error_bool c_false c_true).
+Check2 x0 c_bot_o c_error_o c_x65  -> br c_bot_o (Check x0 c_bot_o c_error_o c_x65).
+Main1 x0 c_bot_o c_error_o c_x65  -> br c_bot_o (Main x0 c_bot_o c_error_o c_x65).
+%ENDG
+%BEGINA
+q c_x65 -> .
+q c_bot_o -> .
+q br -> q q .
+%ENDA

@@ -1,0 +1,42 @@
+/*** The following program models a loop with an exception handler.
+ ***   let f(x,y) = read(x);write(y);f(x,y) in
+ ***   let x = open_in "foo" in
+ ***   let y = open_out "bar" in
+ ***   in try f(x,y) with _ -> close(x); close(y)
+ ***/
+
+%BEGING
+S -> Newr C1.
+C1 x -> Neww (C2 x).
+C2 x y -> F x y (C3 x y) end.
+C3 x y -> Close x (Close y end).
+F x y ex k -> Read x ex (Write y ex (F x y ex k)).
+I x y -> x y.
+K x y -> y.
+Newr k -> br (newr (k I)) (k K). 
+Neww k -> br (neww (k I)) (k K).
+Read x ex k -> x read (br ex k).
+Write x ex k -> x write (br ex k).
+Close x k -> x close k.
+%ENDG
+
+%BEGINA
+q0 br -> q0 q0.
+qr br -> qr qr.
+qw br -> qw qw.
+qrw br -> qrw qrw.
+q0 newr -> qr.
+qr read -> qr.
+qr close -> qc.
+q0 neww -> qw.
+qw write -> qw.
+qw close -> qc.
+qw newr -> qrw.
+qr neww -> qrw.
+qrw read -> qrw.
+qrw write -> qrw.
+qrw close -> qrw.
+qc end ->.
+q0 end ->.
+qrw end ->.
+%ENDA

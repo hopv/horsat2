@@ -1,0 +1,14 @@
+/*** Examples 2.1 and 2.2 ***/
+
+%BEGING
+S -> F c.
+F x -> a x (F (b x)).
+%ENDG
+
+%BEGINA
+q0 a -> q0 q0.
+q0 b -> q1.
+q1 b -> q1.
+q0 c -> .
+q1 c -> .
+%ENDA

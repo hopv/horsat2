@@ -1,0 +1,30 @@
+#!/bin/sh
+
+gtrecs2 example2.1.hrs
+gtrecs2 example2.2.hrs
+gtrecs2 example3.1.hrs
+gtrecs2 example3.2.hrs
+gtrecs2 example3.3.hrs
+gtrecs2 example3.5.hrs
+gtrecs2 example3.6.hrs
+gtrecs2 example3.7.hrs
+gtrecs2 example5.2.hrs
+gtrecs2 exp2-5.hrs
+gtrecs2 exp2-5-wrong.hrs
+gtrecs2 exp3-5.hrs
+# gtrecs2 exp4-5.hrs      
+# gtrecs2 fibstring2.hrs  (15sec)
+gtrecs2 file.hrs
+# gtrecs2 fileocamlc.hrs  (19sec)
+# gtrecs2 lock2.hrs         (stackdump)
+gtrecs2 order5.hrs
+# gtrecs2 order5-2.hrs    (time out)
+# gtrecs2 repeat-2.hrs    (time out)
+gtrecs2 twofiles.hrs
+gtrecs2 twofilesexn.hrs
+
+
+
+
+
+

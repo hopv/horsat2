@@ -1,0 +1,9 @@
+let debugging = ref false;;
+let emptiness_check = ref true;; 
+let negate_automaton = ref true;;
+let compute_all = ref false;;
+let allfun = ref false;;
+let outputfile = ref ""
+let flow = ref true
+let redstep = ref 100000
+let ce = ref true

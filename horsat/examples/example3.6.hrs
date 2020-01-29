@@ -1,0 +1,26 @@
+/*** Encoding of a flow analysis problem, 
+ *** taken from Might and Shivers, "Exploiting reachability and cardinality in higher-order flow analysis"
+ *** The original program is
+ ***   (let* ((id (lambda (x) x)) (unused (id lam))) (id lam').
+ *** The question is whether lam flows to the result of the program.
+ ***/
+
+%BEGING
+S -> b(Id Lam C1).
+C1 unused -> b(Id LamPrime C2).
+C2 f -> from (f end).
+Id x k -> b (k x).
+Lam x -> to(end).
+LamPrime x -> b(end).
+%ENDG
+
+%BEGINA
+q0 br -> q0 q0.
+q1 br -> q1 q1.
+q0 end -> .
+q1 end -> .
+q0 from -> q1.
+q0 to -> q0.
+q0 b -> q0.
+q1 b -> q0.
+%ENDA

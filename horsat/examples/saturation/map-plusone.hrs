@@ -1,0 +1,57 @@
+
+%BEGING
+S_S70  -> S70 c_cons_x28_xs3058 c_nil56 c_x5054 c_x4852.
+KK_c_cons_x28_xs3058 c_cons_x28_xs3058 c_nil56 c_x5054 c_x4852  -> c_cons_x28_xs3058.
+KK_c_nil56 c_cons_x28_xs3058 c_nil56 c_x5054 c_x4852  -> c_nil56.
+KK_c_x5054 c_cons_x28_xs3058 c_nil56 c_x5054 c_x4852  -> c_x5054.
+KK_c_x4852 c_cons_x28_xs3058 c_nil56 c_x5054 c_x4852  -> c_x4852.
+KK_z x1 x2 x3 x4 -> z.
+KK_succ n x1 x2 x3 x4 -> succ (n x1 x2 x3 x4).
+KK_nil x1 x2 x3 x4 -> nil.
+KK_cons y ys x1 x2 x3 x4 -> cons (y x1 x2 x3 x4) (ys x1 x2 x3 x4).
+KK_true x1 x2 x3 x4 -> true.
+KK_false x1 x2 x3 x4 -> false.
+S70 c_cons_x28_xs3058 c_nil56 c_x5054 c_x4852  -> Pi166 SSSSS c_cons_x28_xs3058 c_nil56 c_x5054 c_x4852.
+SSSSS110 x0 c_cons_x28_xs3058 c_nil56 c_x5054 c_x4852  -> SSSSS x0 c_cons_x28_xs3058 c_nil56 c_x5054 c_x4852.
+XS30108 x0 c_cons_x28_xs3058 c_nil56 c_x5054 c_x4852  -> XS30 x0 c_cons_x28_xs3058 c_nil56 c_x5054 c_x4852.
+X28106 x0 c_cons_x28_xs3058 c_nil56 c_x5054 c_x4852  -> X28 x0 c_cons_x28_xs3058 c_nil56 c_x5054 c_x4852.
+N104 x0 c_cons_x28_xs3058 c_nil56 c_x5054 c_x4852  -> N x0 c_cons_x28_xs3058 c_nil56 c_x5054 c_x4852.
+ListN102 x0 c_cons_x28_xs3058 c_nil56 c_x5054 c_x4852  -> ListN x0 c_cons_x28_xs3058 c_nil56 c_x5054 c_x4852.
+S100 x0 c_cons_x28_xs3058 c_nil56 c_x5054 c_x4852  -> S x0 c_cons_x28_xs3058 c_nil56 c_x5054 c_x4852.
+Map98 x0 x1 x2 c_cons_x28_xs3058 c_nil56 c_x5054 c_x4852  -> Map x0 (Pi268 x1) x2 c_cons_x28_xs3058 c_nil56 c_x5054 c_x4852.
+Main96 x0 x1 c_cons_x28_xs3058 c_nil56 c_x5054 c_x4852  -> Main x0 x1 c_cons_x28_xs3058 c_nil56 c_x5054 c_x4852.
+Main x0 x1 c_cons_x28_xs3058 c_nil56 c_x5054 c_x4852  -> Map98 P_succ78 x0 x1 c_cons_x28_xs3058 c_nil56 c_x5054 c_x4852.
+Map x0 x1 x2 c_cons_x28_xs3058 c_nil56 c_x5054 c_x4852  -> x1 (P_cons86 (x0 X28106) (Map98 x0 XS30108) x2 c_cons_x28_xs3058 c_nil56 c_x5054 c_x4852) (P_nil82 x2 c_cons_x28_xs3058 c_nil56 c_x5054 c_x4852) bot bot.
+S x0 c_cons_x28_xs3058 c_nil56 c_x5054 c_x4852  -> ListN102 x0 c_cons_x28_xs3058 c_nil56 c_x5054 c_x4852.
+ListN x0 c_cons_x28_xs3058 c_nil56 c_x5054 c_x4852  -> br (P_nil82 x0 c_cons_x28_xs3058 c_nil56 c_x5054 c_x4852) (P_cons86 N104 ListN102 x0 c_cons_x28_xs3058 c_nil56 c_x5054 c_x4852).
+N x0 c_cons_x28_xs3058 c_nil56 c_x5054 c_x4852  -> br (P_z74 x0 c_cons_x28_xs3058 c_nil56 c_x5054 c_x4852) (P_succ78 N104 x0 c_cons_x28_xs3058 c_nil56 c_x5054 c_x4852).
+X28 x0 c_cons_x28_xs3058 c_nil56 c_x5054 c_x4852  -> N104 x0 c_cons_x28_xs3058 c_nil56 c_x5054 c_x4852.
+XS30 x0 c_cons_x28_xs3058 c_nil56 c_x5054 c_x4852  -> ListN102 x0 c_cons_x28_xs3058 c_nil56 c_x5054 c_x4852.
+SSSSS x0 c_cons_x28_xs3058 c_nil56 c_x5054 c_x4852  -> Main96 S100 x0 c_cons_x28_xs3058 c_nil56 c_x5054 c_x4852.
+P_z74 x0 c_cons_x28_xs3058 c_nil56 c_x5054 c_x4852  -> Pair60 KK_z K_z72 x0 c_cons_x28_xs3058 c_nil56 c_x5054 c_x4852.
+K_z72 c_cons_x28_xs3058 c_nil56 c_x5054 c_x4852  -> c_x5054.
+P_succ78 x0 x1 c_cons_x28_xs3058 c_nil56 c_x5054 c_x4852  -> Pair60 (KK_succ (Pi166 x0)) (K_succ76 (Pi268 x0)) x1 c_cons_x28_xs3058 c_nil56 c_x5054 c_x4852.
+K_succ76 x0 c_cons_x28_xs3058 c_nil56 c_x5054 c_x4852  -> x0 bot bot c_x5054 bot.
+P_nil82 x0 c_cons_x28_xs3058 c_nil56 c_x5054 c_x4852  -> Pair60 KK_nil K_nil80 x0 c_cons_x28_xs3058 c_nil56 c_x5054 c_x4852.
+K_nil80 c_cons_x28_xs3058 c_nil56 c_x5054 c_x4852  -> c_nil56.
+P_cons86 x0 x1 x2 c_cons_x28_xs3058 c_nil56 c_x5054 c_x4852  -> br (Pair60 (KK_cons (Pi166 x0) (Pi166 x1)) (K_cons84 (Pi268 x0) (Pi268 x1)) x2 c_cons_x28_xs3058 c_nil56 c_x5054 c_x4852) (Pair60 (KK_cons (Pi166 x0) (Pi166 x1)) KK_c_cons_x28_xs3058 x2 c_cons_x28_xs3058 c_nil56 c_x5054 c_x4852).
+K_cons84 x0 x1 c_cons_x28_xs3058 c_nil56 c_x5054 c_x4852  -> x0 (x1 bot bot bot bot) (x1 bot bot bot bot) (x1 c_cons_x28_xs3058 c_cons_x28_xs3058 bot bot) (x1 bot bot bot bot).
+P_false90 x0 c_cons_x28_xs3058 c_nil56 c_x5054 c_x4852  -> Pair60 KK_false K_false88 x0 c_cons_x28_xs3058 c_nil56 c_x5054 c_x4852.
+K_false88 c_cons_x28_xs3058 c_nil56 c_x5054 c_x4852  -> c_x4852.
+P_true94 x0 c_cons_x28_xs3058 c_nil56 c_x5054 c_x4852  -> Pair60 KK_true K_true92 x0 c_cons_x28_xs3058 c_nil56 c_x5054 c_x4852.
+K_true92 c_cons_x28_xs3058 c_nil56 c_x5054 c_x4852  -> c_x4852.
+K162 x0 x1 c_cons_x28_xs3058 c_nil56 c_x5054 c_x4852  -> x0 c_cons_x28_xs3058 c_nil56 c_x5054 c_x4852.
+K264 x0 x1 c_cons_x28_xs3058 c_nil56 c_x5054 c_x4852  -> x1 c_cons_x28_xs3058 c_nil56 c_x5054 c_x4852.
+Pi166 x0 c_cons_x28_xs3058 c_nil56 c_x5054 c_x4852  -> x0 K162 c_cons_x28_xs3058 c_nil56 c_x5054 c_x4852.
+Pi268 x0 c_cons_x28_xs3058 c_nil56 c_x5054 c_x4852  -> x0 K264 c_cons_x28_xs3058 c_nil56 c_x5054 c_x4852.
+Pair60 x0 x1 x2 c_cons_x28_xs3058 c_nil56 c_x5054 c_x4852  -> x2 x0 x1 c_cons_x28_xs3058 c_nil56 c_x5054 c_x4852.
+%ENDG
+%BEGINA
+q0 succ -> q1 .
+q0 nil -> .
+q0 cons -> q0 q0 .
+q1 z -> .
+q1 succ -> q1 .
+q0 br -> q0 q0 .
+q1 br -> q1 q1 .
+%ENDA

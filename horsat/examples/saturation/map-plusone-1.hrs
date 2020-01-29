@@ -1,0 +1,61 @@
+
+%BEGING
+S_S83  -> S83 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961.
+KK_c_cons_succ_n28_xs3071 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961  -> c_cons_succ_n28_xs3071.
+KK_c_cons_z_xs3469 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961  -> c_cons_z_xs3469.
+KK_c_nil67 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961  -> c_nil67.
+KK_c_succ_n2865 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961  -> c_succ_n2865.
+KK_c_z63 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961  -> c_z63.
+KK_c_x5961 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961  -> c_x5961.
+KK_z x1 x2 x3 x4 x5 x6 -> z.
+KK_succ n x1 x2 x3 x4 x5 x6 -> succ (n x1 x2 x3 x4 x5 x6).
+KK_nil x1 x2 x3 x4 x5 x6 -> nil.
+KK_cons y ys x1 x2 x3 x4 x5 x6 -> cons (y x1 x2 x3 x4 x5 x6) (ys x1 x2 x3 x4 x5 x6).
+KK_true x1 x2 x3 x4 x5 x6 -> true.
+KK_false x1 x2 x3 x4 x5 x6 -> false.
+S83 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961  -> Pi179 SSSSS c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961.
+SSSSS125 x0 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961  -> SSSSS x0 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961.
+XS34123 x0 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961  -> XS34 x0 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961.
+XS30121 x0 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961  -> XS30 x0 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961.
+N28119 x0 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961  -> N28 x0 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961.
+N117 x0 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961  -> N x0 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961.
+ListN115 x0 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961  -> ListN x0 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961.
+S113 x0 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961  -> S x0 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961.
+Map111 x0 x1 x2 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961  -> Map x0 (Pi281 x1) x2 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961.
+Main109 x0 x1 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961  -> Main x0 x1 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961.
+Main x0 x1 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961  -> Map111 P_succ91 x0 x1 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961.
+Map x0 x1 x2 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961  -> x1 (P_cons99 (x0 (P_succ91 N28119)) (Map111 x0 XS30121) x2 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961) (P_cons99 (x0 P_z87) (Map111 x0 XS34123) x2 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961) (P_nil95 x2 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961) bot bot bot.
+S x0 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961  -> ListN115 x0 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961.
+ListN x0 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961  -> br (P_nil95 x0 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961) (P_cons99 N117 ListN115 x0 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961).
+N x0 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961  -> br (P_z87 x0 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961) (P_succ91 N117 x0 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961).
+N28 x0 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961  -> N117 x0 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961.
+XS30 x0 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961  -> ListN115 x0 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961.
+XS34 x0 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961  -> ListN115 x0 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961.
+SSSSS x0 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961  -> Main109 S113 x0 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961.
+P_z87 x0 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961  -> Pair73 KK_z K_z85 x0 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961.
+K_z85 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961  -> c_z63.
+P_succ91 x0 x1 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961  -> br (Pair73 (KK_succ (Pi179 x0)) (K_succ89 (Pi281 x0)) x1 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961) (Pair73 (KK_succ (Pi179 x0)) KK_c_succ_n2865 x1 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961).
+K_succ89 x0 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961  -> x0 bot bot bot c_succ_n2865 c_succ_n2865 bot.
+P_nil95 x0 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961  -> Pair73 KK_nil K_nil93 x0 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961.
+K_nil93 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961  -> c_nil67.
+P_cons99 x0 x1 x2 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961  -> br (Pair73 (KK_cons (Pi179 x0) (Pi179 x1)) (K_cons97 (Pi281 x0) (Pi281 x1)) x2 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961) (br (Pair73 (KK_cons (Pi179 x0) (Pi179 x1)) KK_c_cons_succ_n28_xs3071 x2 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961) (Pair73 (KK_cons (Pi179 x0) (Pi179 x1)) KK_c_cons_z_xs3469 x2 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961)).
+K_cons97 x0 x1 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961  -> x0 (x1 bot bot bot bot bot bot) (x1 bot bot bot bot bot bot) (x1 bot bot bot bot bot bot) (x1 c_cons_succ_n28_xs3071 c_cons_succ_n28_xs3071 c_cons_succ_n28_xs3071 bot bot bot) (x1 c_cons_z_xs3469 c_cons_z_xs3469 c_cons_z_xs3469 bot bot bot) (x1 bot bot bot bot bot bot).
+P_false103 x0 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961  -> Pair73 KK_false K_false101 x0 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961.
+K_false101 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961  -> c_x5961.
+P_true107 x0 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961  -> Pair73 KK_true K_true105 x0 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961.
+K_true105 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961  -> c_x5961.
+K175 x0 x1 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961  -> x0 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961.
+K277 x0 x1 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961  -> x1 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961.
+Pi179 x0 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961  -> x0 K175 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961.
+Pi281 x0 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961  -> x0 K277 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961.
+Pair73 x0 x1 x2 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961  -> x2 x0 x1 c_cons_succ_n28_xs3071 c_cons_z_xs3469 c_nil67 c_succ_n2865 c_z63 c_x5961.
+%ENDG
+%BEGINA
+q0 succ -> q1 .
+q0 nil -> .
+q0 cons -> q0 q0 .
+q1 z -> .
+q1 succ -> q1 .
+q0 br -> q0 q0 .
+q1 br -> q1 q1 .
+%ENDA

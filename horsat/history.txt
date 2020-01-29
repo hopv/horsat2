@@ -1,0 +1,23 @@
+1.01 -> 1.02: counterexample generation
+1.00 -> 1.01: optimized the co-trivial mode so that the saturation stops immediately
+              when the satisfaction of the co-trivial propery is found.
+0.99 -> 1.00: added a report about input
+0.97 -> 0.99: optimization for gfp (recursive functions are unfolded)
+0.96 -> 0.97: added "-r" option, which obtains under-approximation of 
+              possible variable binddings by reduction 
+0.95 -> 0.96: optimization for gfp
+0.94 -> 0.95: added "-o" option to output the result to a specified file
+0.93 -> 0.94: optimized gfp computing
+0.92 -> 0.93: changed scheduling of saturation
+0.91 -> 0.92: ?
+0.9 -> 0.91: refined inhabtance check
+0.8 -> 0.9: rewrote match_term; the tree automaton is no longer used.
+0.7 -> 0.8: use forward flow analysis to restrict the types of variables
+0.6 -> 0.7: use forward flow analysis to restrict the return types of non-terminals
+0.5 -> 0.6: cache the result of match_term; this may slow down for some examples.
+0.4 -> 0.5: improved gfp mode, 
+            by modifying initial types for terminals/non-terminals
+0.3 -> 0.4: added gfp mode 
+0.2 -> 0.3: optimized match_term by adding (sound but incomplete) emptiness
+            check for intersection types
+0.1 -> 0.2: optimized match_term so that it respects simple types

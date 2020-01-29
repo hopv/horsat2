@@ -1,0 +1,4 @@
+#!/bin/sh
+./test | egrep 'property|analyzing|Elapsed'
+echo 'done'
+

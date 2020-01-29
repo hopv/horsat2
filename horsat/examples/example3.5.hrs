@@ -1,0 +1,19 @@
+/*** Examples 3.5 ***/
+
+%BEGING
+S -> RepeatEven C Not True.
+C b -> If b end Fail.
+RepeatEven k f x -> Ifnondet (k x) (RepeatOdd (f k) f x).
+RepeatOdd k f x -> RepeatEven (f k) f x.
+Not k b -> If b (k False) (k True).
+If b x y -> b x y.
+True x y -> x.
+False x y -> y.
+Ifnondet x y -> br x y.
+Fail -> fail.
+%ENDG
+
+%BEGINA /* br does not occur below a */
+q0 br -> q0 q0.
+q0 end -> .
+%ENDA
