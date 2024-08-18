@@ -351,6 +351,7 @@ let rec dequeue queue =
   | x::q1' -> (queue := (q1',q2); Some(x))
 
 (* integer set *)
-module X = struct type t=int;; let compare = Pervasives.compare end
+(* module X = struct type t=int;; let compare = Pervasives.compare end*)
+module X = struct type t=int;; let compare = Stdlib.compare end
 module IntSet = Set.Make(X)
 
